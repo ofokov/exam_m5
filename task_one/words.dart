@@ -53,9 +53,12 @@ class Words {
     }
     vowelIndex = vowelIndex.reversed.toList();
     List<String> myWord = word.split("");
+    index = -1;
+    int a = 0;
     while (word.indexOf(vowels, index + 1) != -1) {
       index = word.indexOf(vowels, index + 1);
-      myWord[index] = word[vowelIndex[index]];
+      myWord[index] = word[vowelIndex[a]];
+      a++;
     }
 
     return myWord.join();
